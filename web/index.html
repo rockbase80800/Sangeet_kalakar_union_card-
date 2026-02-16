@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meri Pahal Card Creator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Meri Pahal Card Creation Console</h1>
+      <p>Create, pay, verify, approve, and deliver print-ready ID cards.</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>User Journey Wizard</h2>
+        <ol class="steps">
+          <li><strong>Step 1:</strong> Data Entry</li>
+          <li><strong>Step 2:</strong> Upload Your Card Image</li>
+          <li><strong>Step 3:</strong> Preview & Confirm Details</li>
+          <li><strong>Step 4:</strong> Pay ₹365 & Upload Payment Screenshot</li>
+          <li><strong>Step 5:</strong> Payment Received – Pending Approval</li>
+        </ol>
+
+        <form id="cardForm" class="form-grid">
+          <label>Full Name
+            <input id="fullName" placeholder="Artist Name" value="" />
+          </label>
+          <label>Card Title
+            <input id="cardTitle" placeholder="Card Title" value="" />
+          </label>
+          <label>Message
+            <input id="message" placeholder="Message (optional)" value="" />
+          </label>
+          <label>Designation
+            <input id="designation" placeholder="Designation" value="" />
+          </label>
+          <label>Artist Work
+            <input id="artistWork" placeholder="Artist Work" value="" />
+          </label>
+          <label>Mobile No.
+            <input id="mobile" placeholder="Mobile Number" value="" />
+          </label>
+          <label>Address Line 1
+            <input id="address1" placeholder="Address Line 1" value="" />
+          </label>
+          <label>Address Line 2
+            <input id="address2" placeholder="Address Line 2" value="" />
+          </label>
+
+          <div class="upload-box">
+            <h3>Step 1: Upload Your Card Image</h3>
+            <p>Supported formats: JPG, PNG. Recommended 300 DPI.</p>
+            <button type="button">Choose Image</button>
+          </div>
+        </form>
+
+        <section class="payment-box">
+          <h3>Payment (Fixed ₹365 via UPI)</h3>
+          <p><strong>UPI ID:</strong> meripahal@upi</p>
+          <div class="payment-layout">
+            <div class="qr-sample">QR</div>
+            <ol>
+              <li>Open UPI app (Google Pay, PhonePe, etc.)</li>
+              <li>Scan QR code or enter UPI ID</li>
+              <li>Pay ₹365</li>
+              <li>Upload payment screenshot or PDF</li>
+            </ol>
+          </div>
+          <button type="button">Upload Payment Screenshot</button>
+        </section>
+      </section>
+
+      <section class="panel">
+        <h2>CR80 ID Card Preview (85.6mm × 54mm)</h2>
+        <article class="id-card" aria-label="Print-ready card mockup">
+          <div class="id-header">
+            <div class="logo">मेरी<br /><span>pahal</span></div>
+            <h3>MERI PAHAL FAST HELP ARTISTS WELFARE ASSOCIATION (TRUST)</h3>
+          </div>
+          <p class="reg-line">
+            Reg. by Govt. of India - 4186/2022-23 | Registered Office: 43-B, Govind Watika,
+            Jhotwara, Jaipur, Rajasthan, India - 302012 | ☎ 7073741421
+          </p>
+          <div class="id-body">
+            <div class="left-col">
+              <div class="photo">PHOTO</div>
+              <p><strong>DIRECTOR - VIJAY K. TIWARI</strong></p>
+            </div>
+            <div class="details" id="previewDetails"></div>
+            <div class="right-col">
+              <div class="qr">QR</div>
+              <small>SCAN QR CODE</small>
+            </div>
+          </div>
+          <div class="bottom-strip">VALID FOR 1 YEAR</div>
+          <footer>Report Lost ID Card To: +91 7073741421</footer>
+        </article>
+
+        <section class="admin-box">
+          <h3>Admin Approval Queue</h3>
+          <table>
+            <thead>
+              <tr><th>Order</th><th>User</th><th>Status</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ORD-XXXX</td><td>New Applicant</td><td>Pending</td><td><button>Approve</button> <button>Reject</button></td></tr>
+            </tbody>
+          </table>
+          <div class="delivery-actions">
+            <button>Download Image</button>
+            <button>Download PDF</button>
+            <button>Share via WhatsApp</button>
+            <button>Share via Email</button>
+            <button>Copy Share Link</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

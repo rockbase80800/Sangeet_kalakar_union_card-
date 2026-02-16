@@ -9,8 +9,13 @@ const fields = {
 
 const preview = document.getElementById('previewDetails');
 
+const fill = (value, fallback = '________________') => {
+  const v = (value || '').trim();
+  return v.length ? v : fallback;
+};
+
 function renderPreview() {
-  preview.textContent = `ID NO: ______\nArtist Name: ${fields.fullName.value}\nDesignation: ${fields.designation.value}\nArtist Work: ${fields.artistWork.value}\nMobile No.: ${fields.mobile.value}\nAddress:\n${fields.address1.value}\n${fields.address2.value}`;
+  preview.textContent = `ID NO: ______\nArtist Name: ${fill(fields.fullName.value)}\nDesignation: ${fill(fields.designation.value)}\nArtist Work: ${fill(fields.artistWork.value)}\nMobile No.: ${fill(fields.mobile.value)}\nAddress:\n${fill(fields.address1.value)}\n${fill(fields.address2.value)}`;
 }
 
 Object.values(fields).forEach((input) => input.addEventListener('input', renderPreview));

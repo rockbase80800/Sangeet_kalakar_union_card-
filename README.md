@@ -19,3 +19,5 @@ cd web
 python3 -m http.server 4173
 ```
 Then open: `http://localhost:4173`
+
+Note: The prototype intentionally uses neutral placeholders (no cloned/real artist personal data) so only the design system is showcased.
